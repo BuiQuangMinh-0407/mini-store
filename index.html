@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <h1>🛍️ Mini Store</h1>
+            <button id="btn-gio-hang" onclick="moGioHang()">
+                🛒 Giỏ hàng
+                <span id="so-luong-badge" class="badge">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Danh sách sản phẩm -->
+    <main>
+        <h2>Sản phẩm</h2>
+        <div id="danh-sach-san-pham" class="grid-san-pham">
+            <!-- Sản phẩm sẽ được render bởi JavaScript -->
+        </div>
+    </main>
+
+    <!-- Giỏ hàng (sidebar) -->
+    <div id="gio-hang-overlay" class="overlay" onclick="dongGioHang()"></div>
+
+    <div id="gio-hang" class="gio-hang">
+        <div class="gio-hang-header">
+            <h3>🛒 Giỏ hàng của bạn</h3>
+            <button onclick="dongGioHang()" class="btn-dong">✕</button>
+        </div>
+
+        <div id="danh-sach-gio" class="danh-sach-gio">
+            <!-- Sản phẩm trong giỏ hàng -->
+        </div>
+
+        <div class="gio-hang-footer">
+            <p>Tổng tiền: <strong id="tong-tien">0 đ</strong></p>
+            <button onclick="thanhToan()" class="btn-thanh-toan">Thanh toán</button>
+            <button onclick="xoaGio()" class="btn-xoa-gio">Xóa giỏ hàng</button>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
