@@ -1,61 +1,125 @@
 // products.js
-// Danh sách sản phẩm của cửa hàng
+// Danh sach san pham TAMTHAITU
 
 var danhSachSanPham = [
     {
         id: 1,
-        ten: "Áo thun basic",
-        gia: 150000,
-        hinh: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80",
-        moTa: "Áo thun cotton 100%"
+        ten: "Áo thun Basic Oversize",
+        gia: 199000,
+        giaCu: 350000,
+        hinh: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80",
+        loai: "t-shirt",
+        moi: false,
+        sale: true
     },
     {
         id: 2,
-        ten: "Quần jeans slim",
-        gia: 350000,
-        hinh: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&q=80",
-        moTa: "Quần jeans co giãn thoải mái"
+        ten: "Quần Jeans Slim Fit",
+        gia: 420000,
+        giaCu: null,
+        hinh: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80",
+        loai: "jeans",
+        moi: true,
+        sale: false
     },
     {
         id: 3,
-        ten: "Giày sneaker trắng",
-        gia: 500000,
-        hinh: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80",
-        moTa: "Giày thể thao phong cách"
+        ten: "Áo Khoác Denim Nhẹ",
+        gia: 590000,
+        giaCu: 890000,
+        hinh: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",
+        loai: "clothers",
+        moi: false,
+        sale: true
     },
     {
         id: 4,
-        ten: "Túi tote canvas",
-        gia: 120000,
-        hinh: "https://images.unsplash.com/photo-1594938298603-c8148c4b94b4?w=400&q=80",
-        moTa: "Túi vải canvas bền đẹp"
+        ten: "Quần Shorts Thể Thao",
+        gia: 245000,
+        giaCu: null,
+        hinh: "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600&q=80",
+        loai: "shorts",
+        moi: true,
+        sale: false
     },
     {
         id: 5,
-        ten: "Mũ bucket",
-        gia: 95000,
-        hinh: "https://images.unsplash.com/photo-1572307480813-ceb0e59d8325?w=400&q=80",
-        moTa: "Mũ bucket thời trang"
+        ten: "Áo Thun In Logo",
+        gia: 165000,
+        giaCu: 220000,
+        hinh: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80",
+        loai: "t-shirt",
+        moi: false,
+        sale: true
     },
     {
         id: 6,
-        ten: "Áo khoác dù",
-        gia: 420000,
-        hinh: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&q=80",
-        moTa: "Áo khoác nhẹ chống gió"
+        ten: "Quần Jeans Rách Gối",
+        gia: 380000,
+        giaCu: null,
+        hinh: "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=600&q=80",
+        loai: "jeans",
+        moi: true,
+        sale: false
     },
     {
         id: 7,
-        ten: "Dép sandal",
-        gia: 180000,
-        hinh: "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=400&q=80",
-        moTa: "Dép sandal đi biển tiện lợi"
+        ten: "Áo Polo Cổ Bẻ",
+        gia: 280000,
+        giaCu: 390000,
+        hinh: "https://images.unsplash.com/photo-1625910513579-23e1a85c2ef5?w=600&q=80",
+        loai: "t-shirt",
+        moi: false,
+        sale: true
     },
     {
         id: 8,
-        ten: "Balo laptop",
-        gia: 650000,
-        hinh: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&q=80",
-        moTa: "Balo chống nước ngăn laptop 15.6\""
+        ten: "Quần Shorts Kaki",
+        gia: 299000,
+        giaCu: null,
+        hinh: "https://images.unsplash.com/photo-1509551388413-e18d0ac5d495?w=600&q=80",
+        loai: "shorts",
+        moi: true,
+        sale: false
+    },
+    {
+        id: 9,
+        ten: "Áo Sweater Minimal",
+        gia: 450000,
+        giaCu: 620000,
+        hinh: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600&q=80",
+        loai: "clothers",
+        moi: false,
+        sale: true
+    },
+    {
+        id: 10,
+        ten: "Áo Khoác Gió Nhẹ",
+        gia: 520000,
+        giaCu: null,
+        hinh: "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=600&q=80",
+        loai: "clothers",
+        moi: true,
+        sale: false
+    },
+    {
+        id: 11,
+        ten: "Áo Thun Trơn Cổ Tròn",
+        gia: 135000,
+        giaCu: 180000,
+        hinh: "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80",
+        loai: "t-shirt",
+        moi: false,
+        sale: true
+    },
+    {
+        id: 12,
+        ten: "Quần Jeans Ống Rộng",
+        gia: 460000,
+        giaCu: null,
+        hinh: "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600&q=80",
+        loai: "jeans",
+        moi: true,
+        sale: false
     }
 ];

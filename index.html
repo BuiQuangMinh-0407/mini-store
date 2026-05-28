@@ -3,49 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Store</title>
+    <title>TAMTHAITU - Fashion Store</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div class="top-bar-left">
+                <a href="#"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                <a href="#"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="white"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2"/></svg></a>
+                <a href="#"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+            </div>
+            <div class="top-bar-center">
+                🚚 Miễn Phí Giao Hàng Tiêu Chuẩn (Nội thành HCM từ 500.000đ · Khu vực khác từ 800.000đ)
+            </div>
+            <div class="top-bar-right">
+                <span>✉ tamthaitu@gmail.com</span>
+                <span>📞 09.686.17xxx</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
-    <header>
+    <header class="header">
         <div class="header-inner">
-            <h1>🛍️ Mini Store</h1>
-            <button id="btn-gio-hang" onclick="moGioHang()">
-                🛒 Giỏ hàng
-                <span id="so-luong-badge" class="badge">0</span>
-            </button>
+            <nav class="nav-left">
+                <a href="#">Trang chủ</a>
+                <a href="#">Giới thiệu</a>
+                <a href="#san-pham" class="has-dropdown">Sản phẩm ▾</a>
+                <a href="#">Chính sách ▾</a>
+            </nav>
+
+            <div class="logo">TAMTHAITU</div>
+
+            <nav class="nav-right">
+                <a href="#">Khuyến mãi</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Liên hệ</a>
+                <a href="#" class="icon-link">🔍</a>
+                <button class="icon-link cart-btn" onclick="moGioHang()">
+                    🛒 <span id="so-luong-badge" class="badge">0</span>
+                </button>
+            </nav>
         </div>
     </header>
 
-    <!-- Danh sách sản phẩm -->
-    <main>
-        <h2>Sản phẩm</h2>
-        <div id="danh-sach-san-pham" class="grid-san-pham">
-            <!-- Sản phẩm sẽ được render bởi JavaScript -->
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-images">
+            <img class="hero-img left" src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=400&q=80" alt="model 1">
+            <img class="hero-img center" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80" alt="model 2">
+            <img class="hero-img right" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&q=80" alt="model 3">
         </div>
-    </main>
+        <div class="hero-text">
+            <p class="hero-sub">NEW ARRIVALS 2025</p>
+            <h1 class="hero-title">TAMTHAITU</h1>
+            <h2 class="hero-title2">SUMMER COLLECTION</h2>
+            <p class="hero-domain">ONLY ON <span>TAMTHAITU.COM</span></p>
+            <a href="#san-pham" class="hero-btn">MUA NGAY</a>
+        </div>
+    </section>
 
-    <!-- Giỏ hàng (sidebar) -->
+    <!-- Category Section -->
+    <section class="categories">
+        <div class="cat-grid">
+            <div class="cat-card" onclick="locTheoLoai('tat-ca')">
+                <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&q=80" alt="Clothers">
+                <div class="cat-overlay"><span>CLOTHERS</span></div>
+            </div>
+            <div class="cat-card" onclick="locTheoLoai('t-shirt')">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80" alt="T-Shirt">
+                <div class="cat-overlay"><span>T-SHIRT</span></div>
+            </div>
+            <div class="cat-card" onclick="locTheoLoai('jeans')">
+                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&q=80" alt="Jeans">
+                <div class="cat-overlay"><span>JEANS</span></div>
+            </div>
+            <div class="cat-card" onclick="locTheoLoai('shorts')">
+                <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=400&q=80" alt="Shorts">
+                <div class="cat-overlay"><span>SHORTS</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Collection -->
+    <section class="collection" id="san-pham">
+        <div class="collection-header">
+            <h2>TAMTHAITU COLLECTION</h2>
+            <div class="tabs">
+                <button class="tab active" onclick="doiTab(this, 'tat-ca')">Tất cả</button>
+                <button class="tab" onclick="doiTab(this, 'moi')">Hàng mới về</button>
+                <button class="tab" onclick="doiTab(this, 'sale')">Hàng giảm giá</button>
+            </div>
+        </div>
+
+        <div id="danh-sach-san-pham" class="product-grid">
+            <!-- Render bởi JS -->
+        </div>
+
+        <div class="xem-them">
+            <button onclick="xemThem()" id="btn-xem-them">Xem thêm sản phẩm</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h3>TAMTHAITU</h3>
+                <p>Thời trang nam phong cách tối giản.<br>Chất liệu cao cấp · Thiết kế độc quyền.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hỗ trợ</h4>
+                <a href="#">Chính sách đổi trả</a>
+                <a href="#">Hướng dẫn chọn size</a>
+                <a href="#">Chính sách bảo hành</a>
+                <a href="#">Liên hệ</a>
+            </div>
+            <div class="footer-col">
+                <h4>Cửa hàng</h4>
+                <a href="#">Trang chủ</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Khuyến mãi</a>
+                <a href="#">Tin tức</a>
+            </div>
+            <div class="footer-col">
+                <h4>Liên hệ</h4>
+                <p>📍 123 Nguyễn Huệ, Q.1, TP.HCM</p>
+                <p>📞 09.686.17xxx</p>
+                <p>✉ tamthaitu@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 TAMTHAITU. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Overlay + Giỏ hàng -->
     <div id="gio-hang-overlay" class="overlay" onclick="dongGioHang()"></div>
 
     <div id="gio-hang" class="gio-hang">
         <div class="gio-hang-header">
-            <h3>🛒 Giỏ hàng của bạn</h3>
+            <h3>GIỎ HÀNG</h3>
             <button onclick="dongGioHang()" class="btn-dong">✕</button>
         </div>
-
-        <div id="danh-sach-gio" class="danh-sach-gio">
-            <!-- Sản phẩm trong giỏ hàng -->
-        </div>
-
+        <div id="danh-sach-gio" class="danh-sach-gio"></div>
         <div class="gio-hang-footer">
-            <p>Tổng tiền: <strong id="tong-tien">0 đ</strong></p>
-            <button onclick="thanhToan()" class="btn-thanh-toan">Thanh toán</button>
+            <div class="tong-row">
+                <span>Tổng tiền:</span>
+                <strong id="tong-tien">0 đ</strong>
+            </div>
+            <button onclick="thanhToan()" class="btn-thanh-toan">THANH TOÁN</button>
             <button onclick="xoaGio()" class="btn-xoa-gio">Xóa giỏ hàng</button>
         </div>
     </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
 
     <script src="products.js"></script>
     <script src="cart.js"></script>
