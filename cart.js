@@ -98,7 +98,7 @@ function capNhatBadge() {
 // Xóa toàn bộ giỏ hàng
 function xoaGio() {
     if (gioHang.length === 0) {
-        alert('Giỏ hàng đang trống!');
+        alert('Giỏ hàng đang còn trống!');
         return;
     }
     if (confirm('Bạn có chắc muốn xóa toàn bộ giỏ hàng không?')) {

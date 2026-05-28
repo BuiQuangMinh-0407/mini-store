@@ -5,8 +5,8 @@ var danhSachSanPham = [
     {
         id: 1,
         ten: "Áo thun Basic Oversize",
-        gia: 199000,
-        giaCu: 350000,
+        gia: 200000,
+        giaCu: 300000,
         hinh: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80",
         loai: "t-shirt",
         moi: false,
@@ -15,7 +15,7 @@ var danhSachSanPham = [
     {
         id: 2,
         ten: "Quần Jeans Slim Fit",
-        gia: 420000,
+        gia: 400000,
         giaCu: null,
         hinh: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80",
         loai: "jeans",
@@ -26,7 +26,7 @@ var danhSachSanPham = [
         id: 3,
         ten: "Áo Khoác Denim Nhẹ",
         gia: 590000,
-        giaCu: 890000,
+        giaCu: 990000,
         hinh: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",
         loai: "clothers",
         moi: false,
