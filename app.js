@@ -38,7 +38,7 @@ function renderSanPham(tab) {
             '<div class="product-img-wrap">' +
                 '<img src="' + sp.hinh + '" alt="' + sp.ten + '" loading="lazy" onerror="this.src=\'https://via.placeholder.com/400x533?text=No+Image\'">' +
                 badgeHTML +
-                '<button class="btn-add-hover" onclick="event.stopPropagation(); themVaoGio(' + sp.id + ')">+ THÊM VÀO GIỎ</button>' +
+                '<button class="btn-add-hover" onclick="event.stopPropagation(); themVaoGio(' + sp.id + ')">+ THÊM VÀO GIỎ HÀNG</button>' +
             '</div>' +
             '<p class="product-name">' + sp.ten + '</p>' +
             '<div class="product-prices">' +
@@ -107,7 +107,7 @@ function renderGioHang() {
     var tongTienEl = document.getElementById('tong-tien');
 
     if (gioHang.length === 0) {
-        container.innerHTML = '<p class="trong-gio">🛒 Giỏ hàng trống<br><small>Hãy thêm sản phẩm vào giỏ nhé!</small></p>';
+        container.innerHTML = '<p class="trong-gio">🛒 Giỏ hàng đang trống<br><small>Hãy thêm sản phẩm vào giỏ hàng nhé!</small></p>';
         tongTienEl.textContent = '0 đ';
         return;
     }
